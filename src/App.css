@@ -1,38 +1,58 @@
-.App {
+
+
+.main {
   text-align: center;
+  background-color: #161516;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 50px;
+  margin-bottom: 75px;
 }
 
-.App-link {
-  color: #61dafb;
+.header__title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.header__basket {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.basket__quantity {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+.basket__icon {
+  padding-left: 20px;
+}
+
+.cards {
+  display: flex;
+  height: calc(100vh - 240px);
+  flex-wrap: wrap;
+  overflow-x: auto;
+  grid-gap: 30px 15px;
+  padding-bottom: 65px;
+  text-align: center;
+
 }
