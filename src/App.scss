@@ -1,0 +1,91 @@
+.basket {
+  background-color: #161516;
+  font-family: 'Montserrat';
+
+  .container {
+    max-width: 890px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    .header__basket {
+      text-align: center;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 31px;
+      line-height: 38px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      align-items: center;
+      padding-top: 53px;
+      margin-bottom: 38px;
+    }
+
+    .cards-basket {
+      height: calc(100vh - 221px);
+      overflow-x: auto;
+    }
+  }
+
+  .footer {
+
+    .footer__line {
+      border: 1px solid #D58C51;
+    }
+  }
+
+  .container {
+
+    .footer__basket {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .basket__order {
+
+        .order__text {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 21px;
+          line-height: 26px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+
+        }
+
+        .order__sum {
+          margin-left: 15px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          color: #D58C51;
+
+        }
+      }
+
+      .basker__btn {
+
+        .btn__style {
+          width: 200px;
+          height: 42px;
+          background: #D58C51;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #131313;
+
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+.main {
+  text-align: center;
+  background-color: #161516;
+  font-family: 'Montserrat';
+
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    @media (max-width: 1375px) {
+      max-width: 1000px;
+    }
+
+    @media (max-width: 1075px) {
+      max-width: 700px;
+    }
+
+    @media (max-width: 775px) {
+      max-width: 400px;
+    }
+
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 50px;
+      margin-bottom: 75px;
+
+      .header__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 31px;
+        line-height: 38px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+
+      .header__basket {
+        display: flex;
+
+        .basket__quantity {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 21px;
+          text-align: right;
+          color: #FFFFFF;
+        }
+
+        .basket__icon {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      height: calc(100vh - 240px);
+      flex-wrap: wrap;
+      overflow-x: auto;
+      grid-gap: 30px 15px;
+      padding-bottom: 65px;
+      justify-content: center;
+    }
+  }
+}
+
+
+
+
+
+
+
+

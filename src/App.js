@@ -1,27 +1,15 @@
-import './App.css';
+import './App.scss';
 
-import Card from './components/elements/card';
-import {products} from './products';
+import Card from './components/elements/card-basket';
+import {products} from './add-products';
 
 
 function App() {
   return (
-    <main className="main">
+    <main className="basket">
       <div className="container">
-        <header className="header">
-          <h1 className="header__title">наша продукция</h1>
-          <div className="header__basket basket">
-            <div className="basket__quantity quantity">
-              <div className="quantity__position">3 товара</div>
-              <div className="quantity__sum">на сумму 3 500 ₽</div>
-
-            </div>
-            <div className="basket__icon">
-              <img src="images/basket.svg" alt="" />
-            </div>
-          </div>
-        </header>
-        <div className="cards">
+        <header className="header__basket">Корзина с выбранными товарами</header>
+        <div className="cards-basket">
           {products.map(key => {
             const {id, name, description, price, weight, img} = key
             return (
@@ -35,6 +23,21 @@ function App() {
           })}
         </div>
       </div>
+      <footer className="footer">
+        <div className="footer__line"></div>
+        <div className="container">
+          <div className="footer__basket basket">
+            <div className="basket__order order">
+              <span className="order__text">Заказ на сумму:</span>
+              <span className="order__sum">6 220 ₽</span>
+
+            </div>
+            <div className="basker__btn btn">
+              <button className="btn__style">Оформить заказ</button>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
