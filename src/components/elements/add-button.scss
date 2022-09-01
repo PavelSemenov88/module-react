@@ -1,0 +1,23 @@
+.add-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+
+  .add-button__text {
+    width: 15px;
+    height: 15px;
+    content: url('../../../public/images/+.svg');
+    margin-top: 7.5px;
+    margin-left: 7.5px;
+    color: #fff;
+  }
+}
+
+.add-button:hover {
+  border: 1px solid #D58C51;
+  background-color: #D58C51;
+}
+
+
