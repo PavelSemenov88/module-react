@@ -62,6 +62,10 @@
       grid-gap: 30px 15px;
       padding-bottom: 65px;
       justify-content: center;
+      scrollbar-width: none;
+    }
+    .cards::-webkit-scrollbar {
+      width: 0px;
     }
   }
 }
