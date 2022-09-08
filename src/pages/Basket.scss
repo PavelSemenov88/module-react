@@ -8,16 +8,30 @@
     padding: 0 10px;
 
     .header__basket {
-      text-align: center;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 31px;
-      line-height: 38px;
-      text-transform: uppercase;
       color: #FFFFFF;
-      align-items: center;
+      display: flex;
+      justify-content: space-between;
       padding-top: 53px;
       margin-bottom: 38px;
+
+      .header__basket-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 31px;
+        line-height: 38px;
+        text-transform: uppercase;
+        text-align: center;
+        align-items: baseline;
+      }
+
+      .header__basket-icon {
+        color: #FFFFFF;
+        font-size: 12px;
+      }
+
+      .header__basket-icon:hover {
+        color: #D58C51;
+      }
     }
 
     .cards-basket {
