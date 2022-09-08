@@ -1,0 +1,24 @@
+.notfound {
+  background-color: #161516;
+  font-family: 'Montserrat';
+  height: 100vh;
+
+  .container {
+    max-width: 890px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    .header__notfound {
+      text-align: center;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 31px;
+      line-height: 38px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      align-items: center;
+      padding-top: 53px;
+      margin-bottom: 38px;
+    }
+  }
+}

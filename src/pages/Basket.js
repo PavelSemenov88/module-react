@@ -2,17 +2,22 @@ import './Basket.scss';
 
 import Card from '../components/elements/card-basket';
 import {products} from '../add-products';
+import { Link } from 'react-router-dom';
 
 function Basket() {
   return (
     <main className="basket">
       <div className="container">
-        <header className="header__basket">Корзина с выбранными товарами</header>
+        <header className="header__basket">
+          <div className="header__basket-title">Корзина с выбранными товарами</div>
+          <Link to="/" className="header__basket-icon">НАЗАД</Link>
+        </header>
         <div className="cards-basket">
           {products.map(key => {
             const {id, name, description, price, weight, img} = key
             return (
               <Card
+                key={id}
                 url={img}
                 title={name}
                 text={description}
