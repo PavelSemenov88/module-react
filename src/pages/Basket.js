@@ -1,10 +1,17 @@
 import './Basket.scss';
 
 import Card from '../components/elements/card-basket';
-import {products} from '../add-products';
+// import {products} from '../add-products';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+// import { addProduct } from '../store/reducers/basket'
+import { v4 as uuidv4 } from 'uuid';
 
 function Basket() {
+  const basket = useSelector(state => state.basket.basket)
+
+  console.log(basket);
+
   return (
     <main className="basket">
       <div className="container">
@@ -13,16 +20,18 @@ function Basket() {
           <Link to="/" className="header__basket-icon">НАЗАД</Link>
         </header>
         <div className="cards-basket">
-          {products.map(key => {
-            const {id, name, description, price, weight, img} = key
+          {basket.map(key1 => {
+            const {id, name, description, price, weight, img} = key1
             return (
               <Card
                 key={id}
-                url={img}
-                title={name}
-                text={description}
+                id={id}
+                img={img}
+                name={name}
+                // text={description}
                 price={price}
-                weight={weight} />
+                // weight={weight}
+                />
             )
           })}
         </div>
