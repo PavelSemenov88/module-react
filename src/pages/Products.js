@@ -1,19 +1,19 @@
 import './Products.scss';
 
 import Card from '../components/elements/card';
-import {products} from '../products';
+import { products } from '../products';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-
+import { useSelector } from 'react-redux';
 
 
 function Products() {
-  const [sum, setSum] = useState(0);
-  const [count, setCount] = useState(0);
-  const addPriceProduct = (price) => {
-    setSum(sum => sum + parseInt(price));
-    setCount(count => count + 1);
-  }
+  let total = 0;
+  const itemsList = useSelector(state => state.cart.itemsList);
+  itemsList.forEach(item => {
+    total += item.totalPrice;
+  })
+
+  const quantity = useSelector(state => state.cart.totalQuantity);
 
   return (
     <main className="main">
@@ -22,9 +22,8 @@ function Products() {
           <h1 className="header__title">наша продукция</h1>
           <div className="header__basket basket">
             <div className="basket__quantity quantity">
-              <div className="quantity__position">{count} товара</div>
-              <div className="quantity__sum">на сумму {sum} ₽</div>
-
+              <div className="quantity__position">{quantity} товара</div>
+              <div className="quantity__sum">на сумму {total.toLocaleString('ru-RU')} ₽</div>
             </div>
             <Link to="/basket" className="basket__icon">
               <img src="images/basket.svg" alt="" />
@@ -32,18 +31,18 @@ function Products() {
           </div>
         </header>
         <div className="cards">
-          {products.map(key => {
-            const {id, name, description, price, weight, img} = key
+          {products.map(item => {
+            const { id, name, description, price, weight, img } = item
             return (
               <Card
                 key={id}
-                url={img}
-                title={name}
-                text={description}
+                id={id}
+                img={img}
+                name={name}
+                description={description}
                 price={price}
-                weight={weight} 
-                handelClick={(e) => addPriceProduct(price)}
-                />
+                weight={weight}
+              />
             )
           })}
         </div>

@@ -21,11 +21,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-right: 15px;
+      margin-right: 25px;
       width: 75%;
   
       .description__title {
-        max-width: 265px;
+        width: 265px;
         margin-right: 15px;
         font-style: normal;
         font-weight: 500;
@@ -33,7 +33,9 @@
         line-height: 21px;
       }
   
-      .description__price {
+      .description__price
+      .description__quantity
+      .description__totalPrice {
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -45,18 +47,12 @@
   }
   
   .cardBasket-button {
-    box-sizing: border-box;
-    width: 30px;
+    width: 70px;
     height: 30px;
-    border: 1px solid #D58C51;
-    border-radius: 50%;
+    display: flex;
   
-    .cardBasket-button__text {
-      width: 12px;
-      height: 12px;
-      content: url('../../../public/images/X.svg');
-      margin-top: 8px;
-      margin-left: 8px;
+    .cardBasket-button__plus {
+      margin-right: 10px;
     }
   }
 }

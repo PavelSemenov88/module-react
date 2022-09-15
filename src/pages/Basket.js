@@ -1,28 +1,43 @@
 import './Basket.scss';
 
-import Card from '../components/elements/card-basket';
-import {products} from '../add-products';
+import CardBasket from '../components/elements/card-basket';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Button from '../components/elements/button';
 
 function Basket() {
+  const cartItems = useSelector((state) => state.cart.itemsList);
+
+  let total = 0;
+  const itemsList = useSelector(state => state.cart.itemsList);
+  itemsList.forEach(item => {
+    total += item.totalPrice;
+  })
+
   return (
     <main className="basket">
       <div className="container">
         <header className="header__basket">
+          <Link to="/" className="header__basket-icon">
+            <Button
+              url={'images/back.svg'}
+            />
+          </Link>
           <div className="header__basket-title">Корзина с выбранными товарами</div>
-          <Link to="/" className="header__basket-icon">НАЗАД</Link>
         </header>
         <div className="cards-basket">
-          {products.map(key => {
-            const {id, name, description, price, weight, img} = key
+          {cartItems.map(item => {
+            const {id, img, name, price, totalPrice, quantity} = item
             return (
-              <Card
+              <CardBasket
                 key={id}
-                url={img}
-                title={name}
-                text={description}
+                id={id}
+                img={img}
+                name={name}
+                total={totalPrice}
                 price={price}
-                weight={weight} />
+                quantity={quantity}
+                />
             )
           })}
         </div>
@@ -33,7 +48,7 @@ function Basket() {
           <div className="footer__basket basket">
             <div className="basket__order order">
               <span className="order__text">Заказ на сумму:</span>
-              <span className="order__sum">6 220 ₽</span>
+              <span className="order__sum">{total.toLocaleString('ru-RU')} ₽</span>
 
             </div>
             <div className="basker__btn btn">
