@@ -1,31 +1,20 @@
 import './card.scss';
 import { useDispatch } from 'react-redux';
-import { addProduct } from '../../store/reducers/basket';
-import { v4 as uuidv4 } from 'uuid';
-// import React from 'react';
-// import uuid from 'react-uuid';
+import { cartActions } from '../../store/reducers/basket';
+import Button from './button';
 
 
 
 function Card ({id, img, name, description, price, weight}) {
-
+  
   const dispatch = useDispatch();
-  
-  
-
-  const handelAddProduct = () => {
-
-    let item = {
-      key: id,
-      id: uuidv4(),
-      img: img,
-      name: name,
-      price: price,
-    }
-
-    dispatch(addProduct(item))
-
-
+  const addToCart = () => {
+    dispatch(cartActions.addToCart({
+      name,
+      id,
+      price,
+      img,
+    }))
   }
 
   return (
@@ -38,12 +27,13 @@ function Card ({id, img, name, description, price, weight}) {
         </div>
         <footer className="card__footer footer">
           <div className="footer__changes changes">
-            <span className="changes__price">{price} ₽ \ </span>
+            <span className="changes__price">{price.toLocaleString('ru-RU')} ₽ \ </span>
             <span className="changes__weight">{weight}</span>
-
           </div>
-          <div onClick={handelAddProduct} className="footer__add-button add-button">
-            <div className="add-button__text"></div>
+          <div onClick={addToCart} className="footer__add-button">
+              <Button
+                url={'images/plus.svg'}
+              />
           </div>
         </footer>
       </div>
