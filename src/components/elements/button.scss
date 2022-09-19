@@ -1,19 +1,15 @@
-.add-button {
+.button {
   width: 30px;
   height: 30px;
   border: 1px solid white;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
-
-  .add-button__text {
-    width: 15px;
-    height: 15px;
-    margin-top: 7.5px;
-    margin-left: 7.5px;
-  }
+  justify-content: center;
+  align-items: center;
 }
 
-.add-button:hover {
+.button:hover {
   border: 1px solid #D58C51;
   background-color: #D58C51;
 }

@@ -1,43 +1,65 @@
 .basket {
   background-color: #161516;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 
   .container {
-    max-width: 890px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 10px;
 
-    .header__basket {
-      color: #FFFFFF;
+    @media (max-width: 1375px) {
+      max-width: 1200px;
+    }
+
+    @media (max-width: 1250px) {
+      max-width: 1000px;
+    }
+
+    @media (max-width: 1050px) {
+      max-width: 700px;
+    }
+
+    @media (max-width: 750px) {
+      max-width: 600px;
+    }
+
+    .basket-header {
+      color: #ffffff;
       display: flex;
+      align-items: center;
       justify-content: space-between;
       padding-top: 53px;
       margin-bottom: 38px;
 
-      .header__basket-title {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 31px;
-        line-height: 38px;
-        text-transform: uppercase;
-        text-align: center;
-        align-items: baseline;
-      }
+      .basket-header__title {
+        display: flex;
+        align-items: center;
 
-      .header__basket-icon {
-        color: #FFFFFF;
-        font-size: 12px;
+        .basket-header__text {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 31px;
+          line-height: 38px;
+          text-transform: uppercase;
+          padding-left: 63px;
+        }
+
+        .basket-header__icon {
+          color: #ffffff;
+          font-size: 12px;
+        }
       }
 
       .header__basket-icon:hover {
-        color: #D58C51;
+        color: #d58c51;
       }
     }
 
     .cards-basket {
+      max-width: 900px;
       height: calc(100vh - 221px);
       overflow-x: auto;
       scrollbar-width: none;
+      margin: 0 auto;
     }
 
     .cards-basket::-webkit-scrollbar {
@@ -46,14 +68,12 @@
   }
 
   .footer {
-
     .footer__line {
-      border: 1px solid #D58C51;
+      border: 1px solid #d58c51;
     }
   }
 
   .container {
-
     .footer__basket {
       height: 90px;
       display: flex;
@@ -61,14 +81,13 @@
       justify-content: space-between;
 
       .basket__order {
-
         .order__text {
           font-style: normal;
           font-weight: 400;
           font-size: 21px;
           line-height: 26px;
           text-transform: uppercase;
-          color: #FFFFFF;
+          color: #ffffff;
         }
 
         .order__sum {
@@ -77,22 +96,15 @@
           font-weight: 400;
           font-size: 18px;
           line-height: 22px;
-          color: #D58C51;
+          color: #d58c51;
         }
       }
 
       .basker__btn {
-
-        .btn__style {
-          width: 200px;
-          height: 42px;
-          background: #D58C51;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 17px;
-          color: #131313;
-        }
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
       }
     }
   }

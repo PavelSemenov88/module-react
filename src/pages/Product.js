@@ -1,13 +1,19 @@
-import './Products.scss';
+import './Product.scss';
 
-import CardProduct from '../components/elements/card';
-import { products } from '../products';
-import { Link } from 'react-router-dom';
+import CardProduct from '../components/elements/card-product';
+// import { products } from '../products';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useParams } from "react-router-dom";
+import { products } from '../products';
 import ButtonEnd from '../components/elements/button-end';
+import Button from '../components/elements/button';
 
+function Product(params) {
+  const { id } = useParams();
 
-function Products() {
+  const itemList = products.filter((item) => item.id === id);
+
   let total = 0;
   const itemsList = useSelector(state => state.cart.itemsList);
   itemsList.forEach(item => {
@@ -16,12 +22,20 @@ function Products() {
 
   const quantity = useSelector(state => state.cart.totalQuantity);
 
+  const navig = useNavigate();
+  const goBack = () => navig(-1);
+
+
   return (
-    <main className="main">
+    <main className="product">
       <div className="container">
         <header className="header">
-          <h1 className="header__title">наша продукция</h1>
-          <div className="header__basket basket">
+          <div onClick={goBack} className="product__title">
+            <Button
+              url={'images/back.svg'}
+            />
+          </div>
+          <div className="header__basket">
             <div className="basket__quantity quantity">
               <div className="quantity__position">{quantity} товара</div>
               <div className="quantity__sum">на сумму {total.toLocaleString('ru-RU')} ₽</div>
@@ -35,8 +49,7 @@ function Products() {
             />
           </div>
         </header>
-        <div className="cards">
-          {products.map(item => {
+          {itemList.map(item => {
             const { id, name, description, price, weight, img } = item
             return (
               <CardProduct
@@ -51,10 +64,12 @@ function Products() {
               />
             )
           })}
-        </div>
       </div>
     </main>
   );
+
 }
 
-export default Products;
+
+
+export default Product;

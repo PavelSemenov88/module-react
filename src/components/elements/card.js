@@ -2,13 +2,16 @@ import './card.scss';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/reducers/basket';
 import Button from './button';
+import { Link } from 'react-router-dom';
 
 
 
-function Card ({id, img, name, description, price, weight}) {
+function Card ({id, img, name, description, price, weight, link}) {
   
   const dispatch = useDispatch();
-  const addToCart = () => {
+  const addToCart = (e) => {
+    e.stopPropagation()
+    e.preventDefault()
     dispatch(cartActions.addToCart({
       name,
       id,
@@ -18,7 +21,9 @@ function Card ({id, img, name, description, price, weight}) {
   }
 
   return (
-    <div className="card">
+    <Link
+    to={link}
+    className="card">
       <img className="card__preview" src={img} alt="" />
       <div className="card__cont">
         <div className="cont__card">
@@ -37,7 +42,7 @@ function Card ({id, img, name, description, price, weight}) {
           </div>
         </footer>
       </div>
-    </div>
+    </Link>
   );
 }
 

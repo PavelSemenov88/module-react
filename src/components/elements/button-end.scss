@@ -1,0 +1,22 @@
+.button-end {
+  width: 200px;
+  height: 42px;
+  border: 1px solid #d58c51;
+  // border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #D58C51;
+}
+
+.button-end:hover {
+  // border: 1px solid #D58C51;
+  background-color: #d58c51;
+  color: #fff;
+}

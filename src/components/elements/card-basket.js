@@ -1,10 +1,11 @@
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { cartActions } from '../../store/reducers/basket';
 import Button from './button';
 import './card-basket.scss';
 
 
-function CardBasket ({id, img, name, price, quantity, total}) {
+function CardBasket({ id, img, name, price, quantity, total, link }) {
   const dispatch = useDispatch();
 
   const addToCart = () => {
@@ -21,7 +22,9 @@ function CardBasket ({id, img, name, price, quantity, total}) {
   return (
     <div className="cardBasket">
       <div className="cardBasket__content content">
-        <img src={img} alt="" className="content__img" />
+        <Link to={link} className="content__img">
+          <img src={img} alt="" className="content__img-img" />
+        </Link>
         <div className="content__description description">
           <div className="description__title">{name}</div>
           <div className="description__price">{price.toLocaleString('ru-RU')} ₽</div>
@@ -41,7 +44,7 @@ function CardBasket ({id, img, name, price, quantity, total}) {
           />
         </div>
       </div>
-      
+
     </div>
   );
 }

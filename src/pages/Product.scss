@@ -1,7 +1,9 @@
-.main {
+.product {
   text-align: center;
-  background-color: #161516;
+  background: #161516 no-repeat url('../../public/images/productFon.png');
+  background-size: cover;
   font-family: "Montserrat";
+  height: 100vh;
 
   .container {
     max-width: 1300px;
@@ -11,16 +13,16 @@
       max-width: 1200px;
     }
 
-    @media (max-width: 1220px) {
+    @media (max-width: 1250px) {
       max-width: 1000px;
     }
 
-    @media (max-width: 1020px) {
+    @media (max-width: 1050px) {
       max-width: 700px;
     }
 
-    @media (max-width: 720px) {
-      max-width: 600px;
+    @media (max-width: 700px) {
+      max-width: 500px;
     }
 
     .header {
@@ -35,7 +37,7 @@
         margin: 0 auto 45px auto;
       }
 
-      .header__title {
+      .product__title {
         font-style: normal;
         font-weight: 700;
         font-size: 31px;
@@ -67,21 +69,6 @@
           transform: scale(1.2);
         }
       }
-    }
-
-    .cards {
-      display: flex;
-      height: calc(100vh - 260px);
-      flex-wrap: wrap;
-      overflow-x: auto;
-      grid-gap: 30px 15px;
-      padding-bottom: 65px;
-      padding-top: 20px;
-      justify-content: center;
-      scrollbar-width: none;
-    }
-    .cards::-webkit-scrollbar {
-      width: 0px;
     }
   }
 }

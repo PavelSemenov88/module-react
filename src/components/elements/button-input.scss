@@ -1,0 +1,20 @@
+.button-input {
+  width: 200px;
+  height: 42px;
+  background-color: #d58c51;
+  color: #131313;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.button-input:hover {
+  color: #d58c51;
+  background-color: inherit;
+  border: 1px solid #d58c51;
+}
