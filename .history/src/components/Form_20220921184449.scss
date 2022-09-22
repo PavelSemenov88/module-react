@@ -1,0 +1,75 @@
+.form {
+  .form__email,
+  .form__password {
+    width: 420px;
+    height: 39px;
+    border: 1px solid #d58c51;
+    border-radius: 61px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding-left: 18px;
+  }
+
+  .form__email::placeholder,
+  .form__password::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #161516;
+  }
+
+  // .auth__form-text {
+  //   font-style: normal;
+  //   font-weight: 300;
+  //   font-size: 8px;
+  //   line-height: 10px;
+  //   color: #ff0b0b;
+  //   text-align: left;
+  //   margin-left: 38px;
+  //   margin-bottom: 5px;
+  // }
+
+  .form__checkbox {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+    .form__checbox-input {
+    }
+
+    .form__checkbox-text {
+      margin-left: 10px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 13px;
+      color: #301411;
+    }
+  }
+
+  .form-button {
+    width: 200px;
+    height: 42px;
+    background-color: #d58c51;
+    color: #131313;
+    cursor: pointer;
+    display: fl;
+    justify-content: center;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .form-button:hover {
+    color: #d58c51;
+    background-color: inherit;
+    border: 1px solid #d58c51;
+  }
+}
