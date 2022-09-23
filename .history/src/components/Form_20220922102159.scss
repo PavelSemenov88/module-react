@@ -1,0 +1,117 @@
+.auth {
+  width: 100vw;
+  height: 100vh;
+  background: no-repeat url("../../public/images/authFon.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+
+  .auth__form {
+    width: 460px;
+    height: 340px;
+    text-align: center;
+    background: #ffffff;
+
+    .auth__form-link {
+      display: block;
+      text-align: right;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 13px;
+      text-align: right;
+      text-decoration-line: underline;
+      color: #d58c51;
+      margin: 10px 20px 15px 0;
+    }
+
+    .auth__form-title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 31px;
+      line-height: 38px;
+      text-transform: uppercase;
+      color: #161516;
+      margin-bottom: 35px;
+
+    }
+    .form {
+
+      .form__email,
+      .form__password {
+        width: 420px;
+        height: 39px;
+        border: 1px solid #d58c51;
+        border-radius: 61px;
+        padding: 0;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        padding-left: 18px;
+      }
+
+      .form__email::placeholder,
+      .form__password::placeholder {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #161516;
+      }
+
+      .error1 {
+        display: none;
+      }
+
+      .form__checkbox {
+        text-align: left;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+
+        .form__checbox-input {
+        }
+
+        .form__checkbox-text {
+          margin-left: 10px;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 11px;
+          line-height: 13px;
+          color: #301411;
+        }
+      }
+
+      .button-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .form-button {
+          width: 200px;
+          height: 42px;
+          background-color: #d58c51;
+          color: #131313;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // text-transform: uppercase;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+        }
+
+        .form-button:hover {
+          color: #d58c51;
+          background-color: inherit;
+          border: 1px solid #d58c51;
+        }
+      }
+    }
+  }
+}
