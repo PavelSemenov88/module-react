@@ -9,7 +9,7 @@ import ButtonInput from './button-input';
 function CardProduct ({id, img, name, description, price, weight, link}) {
   
   const dispatch = useDispatch();
-  const addCart = (e) => {
+  const addToCart = (e) => {
     // e.stopPropagation()
     e.preventDefault()
     dispatch(addToCart({

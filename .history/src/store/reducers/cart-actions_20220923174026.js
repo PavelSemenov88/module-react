@@ -37,7 +37,7 @@ export const sendCartData = (cart) => {
         body: JSON.stringify(cart)
       });
       const data = await res.json();
-      return data;
+      
 
 
       // dispatch(showNotification({

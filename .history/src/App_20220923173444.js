@@ -9,7 +9,7 @@ import SignUp from 'components/SignUp';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-// import Notification from './pages/Notification';
+import Notification from './pages/Notification';
 // import { uiActions } from './store/reducers/ui-slice';
 import { sendCartData } from './store/reducers/cart-actions';
 import { fetchData } from './store/reducers/cart-actions';

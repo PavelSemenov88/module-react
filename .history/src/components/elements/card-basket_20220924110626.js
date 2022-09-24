@@ -8,7 +8,7 @@ import './card-basket.scss';
 function CardBasket({ id, img, name, price, quantity, total, link }) {
   const dispatch = useDispatch();
 
-  const addCart = () => {
+  const addToCart = () => {
     dispatch(addToCart({
       name,
       id,

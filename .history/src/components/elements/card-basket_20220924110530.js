@@ -33,7 +33,7 @@ function CardBasket({ id, img, name, price, quantity, total, link }) {
         </div>
       </div>
       <div className="cardBasket-button">
-        <div onClick={addCart} className="cardBasket-button__plus">
+        <div onClick={addToCart} className="cardBasket-button__plus">
           <Button
             url={'images/plus.svg'}
           />

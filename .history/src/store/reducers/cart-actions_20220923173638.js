@@ -37,25 +37,23 @@ export const sendCartData = (cart) => {
         body: JSON.stringify(cart)
       });
       const data = await res.json();
-      return data;
 
+      dispatch(showNotification({
+        open: true,
+        message: 'Sent Request TO Database SuccessFully',
+        type: 'success',
 
-      // dispatch(showNotification({
-      //   open: true,
-      //   message: 'Sent Request TO Database SuccessFully',
-      //   type: 'success',
-
-      // }))
+      }))
     };
     try {
       await sendRequest();
     } catch (err) {
-      // dispatch(showNotification({
-      //   open: true,
-      //   message: 'Sending Request Failed',
-      //   type: 'error',
+      dispatch(showNotification({
+        open: true,
+        message: 'Sending Request Failed',
+        type: 'error',
 
-      // }))
+      }))
     }
   }
 }
